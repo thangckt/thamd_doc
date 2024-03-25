@@ -1,0 +1,5014 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="thangckt">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../model/crystalline/">
+      
+      
+      <link rel="icon" href="../1images/snake1.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+    
+    
+      
+        <title>traj - thamd</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d8bd0487.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../_extend_theme/extra_css/full_width.css">
+    
+      <link rel="stylesheet" href="../_extend_theme/extra_css/font_size.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-QM7DWGY7ZT"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-QM7DWGY7ZT",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-QM7DWGY7ZT",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#molecular-dynamics-trajectory" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="thamd" class="md-header__button md-logo" aria-label="thamd" data-md-component="logo">
+      
+  <img src="../1images/snake1.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            thamd
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              traj
+            
+          </span>
+        </div>
+      </div>
+    </div>
+      
+        
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://thangckt.github.io" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href=".." class="md-tabs__link">
+          
+  
+    
+  
+  thamd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://thangckt.github.io/thaml_doc" class="md-tabs__link">
+        
+  
+    
+  
+  thaml
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://thangckt.github.io/thamedia_doc" class="md-tabs__link">
+        
+  
+    
+  
+  thamedia
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://chat-gpt-next-ihq6gv7qw-thangckt-gmailcom.vercel.app/" class="md-tabs__link">
+        
+  
+    
+  
+  NextChat
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://thang.eu.org/blog/2024/01/25/bibtex_generator/" class="md-tabs__link">
+        
+  
+    
+  
+  1click_BibTeX
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="thamd" class="md-nav__button md-logo" aria-label="thamd" data-md-component="logo">
+      
+  <img src="../1images/snake1.png" alt="logo">
+
+    </a>
+    thamd
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://thangckt.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    thamd
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            thamd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    traj
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    traj
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thamd.traj" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;traj
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" traj">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Frame
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" Frame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.box" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;box
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.box_angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;box_angle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.prop_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;prop_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.general" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.atom" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;atom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.mass" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;mass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.pair_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;pair_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.bond_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;bond_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.angle_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;angle_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.dihedral_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dihedral_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.improper_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;improper_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.bondBond_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;bondBond_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.bondAngle_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;bondAngle_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.middleBondTorsion_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;middleBondTorsion_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.endBondTorsion_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;endBondTorsion_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.angleTorsion_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;angleTorsion_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.angleAngleTorsion_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;angleAngleTorsion_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.bondBond13_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;bondBond13_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.angleAngle_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;angleAngle_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;bond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;angle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.dihedral" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dihedral
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.improper" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;improper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.create_DATA" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;create_DATA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.read_DATA" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;read_DATA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.read_DUMP" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;read_DUMP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.write_DATA" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;write_DATA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.write_DUMP" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;write_DUMP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.read_PDB" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;read_PDB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.write_PDB" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;write_PDB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.read_XYZ" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;read_XYZ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.write_XYZ" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;write_XYZ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.combine_frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;combine_frame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.unwrap_coord_DATA" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;unwrap_coord_DATA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.wrap_coords_DUMP" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;wrap_coords_DUMP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.flip_coords" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;flip_coords
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.replicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;replicate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.scale_box" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;scale_box
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.add_column" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;add_column
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.delete_column" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;delete_column
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.set_mass" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;set_mass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.change_atom_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;change_atom_type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.merge_atom_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;merge_atom_type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.compute_mass" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;compute_mass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.compute_wt_percent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;compute_wt_percent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.compute_colvar_sph_harm" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;compute_colvar_sph_harm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;copy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.check_exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;check_exist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Traj" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Traj
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" Traj">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Traj.fmtSTR" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;fmtSTR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Traj.readXYZ" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;readXYZ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/crystalline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    crystalline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/coordinate_tranform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    coordinate_tranform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/forcefield_info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    forcefield_info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/pair_LJ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pair_LJ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/polymer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    polymer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    colvars
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            colvars
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../colvar/colvar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Colvar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../colvar/find_neighbors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    find_neighbors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../colvar/switch_function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    switch_function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../colvar/voronoi_analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    voronoi_analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../colvar/surface_extractor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    surface_extractor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Free energy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Free energy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../free_energy/TI_method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TI methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../free_energy/replica_MD_average/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    replica_MD_average
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../free_energy/replica_SteerMD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    replica_SteerMD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../free_energy/replica_logPD_integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    replica_logPD_integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    File IO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            File IO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/Lmp_Log_File/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LmpLogFile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/Lmp_RDF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LmpRDF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/Lmp_Ave_Chunk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LmpAveChunk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/Plum_Histogram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PlumHistogram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/read_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    read_data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/define_script/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    define_script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/read_script/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    read_script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/write_script/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    write_script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/path_tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Path tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    vis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://thangckt.github.io/thaml_doc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    thaml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://thangckt.github.io/thamedia_doc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    thamedia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat-gpt-next-ihq6gv7qw-thangckt-gmailcom.vercel.app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NextChat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://thang.eu.org/blog/2024/01/25/bibtex_generator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1click_BibTeX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thamd.traj" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;traj
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" traj">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Frame
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" Frame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.box" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;box
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.box_angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;box_angle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.prop_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;prop_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.general" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.atom" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;atom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.mass" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;mass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.pair_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;pair_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.bond_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;bond_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.angle_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;angle_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.dihedral_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dihedral_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.improper_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;improper_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.bondBond_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;bondBond_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.bondAngle_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;bondAngle_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.middleBondTorsion_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;middleBondTorsion_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.endBondTorsion_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;endBondTorsion_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.angleTorsion_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;angleTorsion_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.angleAngleTorsion_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;angleAngleTorsion_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.bondBond13_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;bondBond13_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.angleAngle_coeff" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;angleAngle_coeff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;bond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;angle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.dihedral" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dihedral
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.improper" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;improper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.create_DATA" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;create_DATA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.read_DATA" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;read_DATA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.read_DUMP" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;read_DUMP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.write_DATA" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;write_DATA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.write_DUMP" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;write_DUMP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.read_PDB" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;read_PDB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.write_PDB" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;write_PDB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.read_XYZ" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;read_XYZ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.write_XYZ" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;write_XYZ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.combine_frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;combine_frame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.unwrap_coord_DATA" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;unwrap_coord_DATA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.wrap_coords_DUMP" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;wrap_coords_DUMP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.flip_coords" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;flip_coords
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.replicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;replicate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.scale_box" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;scale_box
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.add_column" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;add_column
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.delete_column" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;delete_column
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.set_mass" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;set_mass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.change_atom_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;change_atom_type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.merge_atom_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;merge_atom_type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.compute_mass" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;compute_mass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.compute_wt_percent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;compute_wt_percent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.compute_colvar_sph_harm" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;compute_colvar_sph_harm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;copy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Frame.check_exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;check_exist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Traj" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Traj
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" Traj">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Traj.fmtSTR" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;fmtSTR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.traj.Traj.readXYZ" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;readXYZ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="molecular-dynamics-trajectory">Molecular dynamics trajectory<a class="headerlink" href="#molecular-dynamics-trajectory" title="Permanent link">&para;</a></h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="thamd.traj" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>          <code>thamd.traj</code>
+
+
+<a href="#thamd.traj" class="headerlink" title="Permanent link">&para;</a></h2>
+
+  <div class="doc doc-contents first">
+  
+      <p>This module contains classes and functions to process molecular dynamics trajectories.</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="thamd.traj.Frame" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">Frame</span><span class="p">(</span><span class="n">dump_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">atom_style</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">pdb_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xyz_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">from_df</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">box</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">box_angle</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Create an Object for a single-FRAME of trajectories from MD simulation.</p>
+<p>This class create a data-object (single configuration) for the analysis of computing data from LAMMPS. The file formats implemented in this class</p>
+<p><img alt="image" src="https://icme.hpc.msstate.edu/mediawiki/images/e/e7/4kovito.gif" /></p>
+<ul>
+<li><a href="https://docs.lammps.org/2001/data_format.html">LAMMPS DATA Format</a></li>
+<li><a href="https://docs.lammps.org/dump.html">LAMMPS DUMP Format</a></li>
+<li><a href="https://ftp.wwpdb.org/pub/pdb/doc/format_descriptions/Format_v33_Letter.pdf">PDB format</a></li>
+<li><a href="https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/xyz.html">XYZ format</a></li>
+</ul>
+<p>This class implemented several ways to create <code>Frame</code> object</p>
+<ul>
+<li>create an empty data object</li>
+<li>create_DATA object with input data</li>
+<li>read from DUMP file</li>
+<li>read from DATA file</li>
+<li>read frome PDB file</li>
+</ul>
+
+
+
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b><code><span title="thamd.traj.Frame.filename">filename</span></code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of input file</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code><span title="thamd.traj.Frame.timestep">timestep</span></code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>the timestep of configuration</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code><a class="autorefs autorefs-internal" title="thamd.traj.Frame.box" href="#thamd.traj.Frame.box">box</a></code></b>
+            (<code><span title="numpy.array">array</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>3x2 array, the box size</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code><a class="autorefs autorefs-internal" title="thamd.traj.Frame.box_angle" href="#thamd.traj.Frame.box_angle">box_angle</a></code></b>
+            (<code><span title="numpy.array">array</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>1x3 array, the box angle</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code><a class="autorefs autorefs-internal" title="thamd.traj.Frame.atom" href="#thamd.traj.Frame.atom">atom</a></code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>DataFrame of per-atom values</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code><a class="autorefs autorefs-internal" title="thamd.traj.Frame.prop_key" href="#thamd.traj.Frame.prop_key">prop_key</a></code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>column-names of properties</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code><a class="autorefs autorefs-internal" title="thamd.traj.Frame.mass" href="#thamd.traj.Frame.mass">mass</a></code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>DataFrame of per-type masses</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code><span title="thamd.traj.Frame.FMTstr">FMTstr</span></code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>default format for float numbers, don't use %g because it will lost precision</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">thamd.traj</span>  <span class="kn">import</span> <span class="n">Frame</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">da</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">()</span>                        <span class="c1"># empty object</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">da</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">from_df</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>              <span class="c1"># oject with input data</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">da</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">dump_file</span><span class="o">=</span><span class="s1">&#39;test.cfg&#39;</span><span class="p">)</span>    <span class="c1"># from DUMP file</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">da</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">data_file</span><span class="o">=</span><span class="s1">&#39;mydata.dat&#39;</span><span class="p">)</span>  <span class="c1"># from DATA file</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">da</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">pdb_file</span><span class="o">=</span><span class="s1">&#39;test.pdb&#39;</span><span class="p">)</span>     <span class="c1"># from PDB file</span>
+</code></pre></div>
+      <details class="quote" open="open">
+<summary>Quote</summary>
+<p>[1]. <a href="https://stackoverflow.com/questions/36484000/use-an-object-method-with-the-initializer-same-line">Use chain mutator calls</a></p>
+</details>
+  
+      <p>initilize the Frame object</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>dump_file</code></b>
+            (<code>str</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>filename of DUMP file.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>data_file</code></b>
+            (<code>str</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>filename of DATA file.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>pdb_file</code></b>
+            (<code>str</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>filename of PBD file.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>xyz_file</code></b>
+            (<code>str</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>filename of XYZ file.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>from_df</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>create FRAME from data.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>atom_style</code></b>
+            (<code>str</code>, default:
+                <code>&#39;auto&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>atom_style of system. Only need when <code>data_file</code> is used. Possible values: 'atomic', 'molecular', 'charge', 'full', 'auto'</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>box</code></b>
+            (<code>np.array list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Define simulation box. Only need when <code>from_df</code> is used.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>box_angle</code></b>
+            (<code>np.array list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Define angle of simulation box. Only need when <code>from_df</code> is used.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code><a class="autorefs autorefs-internal" title="thamd.traj.md_traj.Frame" href="#thamd.traj.Frame">Frame</a></code>
+)        –
+        <div class="doc-md-description">
+          <p>object of trajectories</p>
+      </div>
+      </li>
+  </ul>
+      <details class="note" open="open">
+<summary>Note</summary>
+<p>Use mutator, so do not use self.* when define value</p>
+</details>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.box" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">box</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.box" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.box_angle" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">box_angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.box_angle" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.prop_key" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">prop_key</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.prop_key" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.general" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">general</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;md_frame&#39;</span><span class="p">,</span> <span class="s1">&#39;step&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;fmt&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%.6f</span><span class="s1">&#39;</span><span class="p">})</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.general" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.atom" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">atom</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.atom" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.mass" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">mass</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.mass" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.pair_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">pair_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.pair_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.bond_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">bond_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.bond_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.angle_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">angle_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.angle_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.dihedral_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">dihedral_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.dihedral_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.improper_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">improper_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.improper_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.bondBond_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">bondBond_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.bondBond_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.bondAngle_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">bondAngle_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.bondAngle_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.middleBondTorsion_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">middleBondTorsion_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.middleBondTorsion_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.endBondTorsion_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">endBondTorsion_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.endBondTorsion_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.angleTorsion_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">angleTorsion_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.angleTorsion_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.angleAngleTorsion_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">angleAngleTorsion_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.angleAngleTorsion_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.bondBond13_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">bondBond13_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.bondBond13_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.angleAngle_coeff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">angleAngle_coeff</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.angleAngle_coeff" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.bond" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">bond</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.bond" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.angle" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">angle</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.angle" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.dihedral" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">dihedral</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.dihedral" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Frame.improper" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">improper</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Frame.improper" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.create_DATA" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">create_DATA</span><span class="p">(</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">box</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">box_angle</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.create_DATA" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to create new FRAME object with input data.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>DataFrame</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>of input data</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>box</code></b>
+            (<code><span title="numpy.array">array</span></code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>3x2 array, option to input boxSize.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>box_angle</code></b>
+            (<code><span title="numpy.array">array</span></code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>1x3 array, option to input box_angle.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code><a class="autorefs autorefs-internal" title="thamd.traj.md_traj.Frame" href="#thamd.traj.Frame">Frame</a></code>
+)        –
+        <div class="doc-md-description">
+          <p>update Frame</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">()</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">da</span><span class="o">.</span><span class="n">create_DATA</span><span class="p">(</span><span class="n">DataFrame</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># or</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">da</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">from_df</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.read_DATA" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">read_DATA</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">atom_style</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.read_DATA" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to create FRAME object by reading DATA file.
+The style of atomistic system.The format of "data file" depend on the definition of <a href="https://lammps.sandia.gov/doc/atom_style.html">"atom_style"</a>.
+See <a href="https://lammps.sandia.gov/doc/read_data.html#description">list of atom_style format</a>. Can be detected automatically, or explicitly setting
+        - atomic      : atom-ID atom-type x y z
+        - charge      : atom-ID atom-type q x y z
+        - molecular   : atom-ID molecule-ID atom-type x y z
+        - full        : atom-ID molecule-ID atom-type q x y z
+Full <a href="https://docs.lammps.org/2001/data_format.html">lammps_data format</a></p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>filename</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of input file</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>atom_style</code></b>
+            (<code>str</code>, default:
+                <code>&#39;auto&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>option to choose atom_style. Defaults to 'auto'.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">da</span> <span class="o">=</span> <span class="n">TrajFrame</span><span class="p">(</span><span class="n">data_file</span><span class="o">=</span><span class="s1">&#39;mydata.dat&#39;</span><span class="p">)</span>
+</code></pre></div>
+      <details class="note" open="open">
+<summary>Note</summary>
+<p>imgFlag: is auto detected
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    np.char.split(C[index]).tolist()              return &quot;object&quot;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    np.char.split(C[index]).tolist()              return list
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    np.char.split(C[index1:idx_vel]).tolist()     return list-of-lists (2d list)
+</code></pre></div></p>
+</details>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.read_DUMP" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">read_DUMP</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.read_DUMP" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to create FRAME object by reading DUMP file.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>filename</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of input file</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">da</span> <span class="o">=</span> <span class="n">TrajFrame</span><span class="p">()</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">da</span><span class="o">.</span><span class="n">read_DUMP</span><span class="p">(</span><span class="n">DataFrame</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="c1"># or</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">da</span> <span class="o">=</span> <span class="n">TrajFrame</span><span class="p">(</span><span class="n">dump_file</span><span class="o">=</span><span class="s1">&#39;mydata.cfg&#39;</span><span class="p">)</span>
+</code></pre></div>
+      <details class="note" open="open">
+<summary>Note</summary>
+<p>use list comprehension in code to get better performance</p>
+</details>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.write_DATA" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">write_DATA</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">atom_style</span><span class="o">=</span><span class="s1">&#39;atomic&#39;</span><span class="p">,</span> <span class="n">ignore_vel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_imgFlag</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_pair_coeff</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">comment_line</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">FMTstr</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.6f</span><span class="s1">&#39;</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.write_DATA" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to write DATA file. <a href="https://docs.lammps.org/2001/data_format.html">DATA format</a></p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>filename</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of input file</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>atom_style</code></b>
+            (<code>str</code>, default:
+                <code>&#39;atomic&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>the style of atomistic system, can be 'atomic', 'charge', 'molecular', 'full' . Defaults to 'atomic'.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>ignore_vel</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>to write Velocity values.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>ignore_imgFlag</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>to write imgFlag tag.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>ignore_pair_coeff</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>ignore pair-coeff when write data.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>comment_line</code></b>
+            (<code>str</code>, default:
+                <code>&#39;&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>comment on second line in DATA file. Defaults to ''.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>FMTstr</code></b>
+            (<code>str</code>, default:
+                <code>&#39;%.6f&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>string format for output values. Defaults to None, mean use self._FMT</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>file</code></b> (            <code>obj</code>
+)        –
+        <div class="doc-md-description">
+          <p>the DUMP file</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">write_DATA</span><span class="p">(</span><span class="s1">&#39;test.dat&#39;</span><span class="p">,</span> <span class="n">atom_style</span><span class="o">=</span><span class="s1">&#39;atomic&#39;</span><span class="p">,</span> <span class="n">ignore_imgFlag</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_vel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">FMT</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.4f</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.write_DUMP" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">write_DUMP</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">FMTstr</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.write_DUMP" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to write DUMP file.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>filename</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of input file</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>column</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>list-of-str contains columns to be written. Defaults to None, mean all columns will be written</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>FMTstr</code></b>
+            (<code>str</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>string format for output values. Defaults to None, mean use self._FMT</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>file</code></b> (            <code>obj</code>
+)        –
+        <div class="doc-md-description">
+          <p>the DUMP file</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">write_DUMP</span><span class="p">(</span><span class="s1">&#39;test.cfg&#39;</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;type&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">],</span> <span class="n">FMTstr</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.4f</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.read_PDB" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">read_PDB</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.read_PDB" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to create FRAME object by reading PDB file.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>filename</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of input file</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME
+record_name (str):
+atom_symbol (str): same as column 'type' in DUMP format
+residue_name (str):
+residue_id (int):
+chain (str):
+occupancy (float):
+beta (float):</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span> <span class="o">=</span> <span class="n">TrajFrame</span><span class="p">(</span><span class="n">pdb_file</span><span class="o">=</span><span class="s1">&#39;mydata.pdb&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.write_PDB" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">write_PDB</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">writeBox</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.write_PDB" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to write <a href="https://zhanggroup.org/SSIPe/pdb_atom_format.html">PDB file</a></p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>filename</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of input file</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>writeBox</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>write box or not.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>file</code></b> (            <code>obj</code>
+)        –
+        <div class="doc-md-description">
+          <p>the PDB file</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">write_PDB</span><span class="p">(</span><span class="s1">&#39;test.pdb&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.read_XYZ" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">read_XYZ</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.read_XYZ" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to create FRAME object by reading XYZ file.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>filename</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of input file</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span> <span class="o">=</span> <span class="n">TrajFrame</span><span class="p">(</span><span class="n">pdb_file</span><span class="o">=</span><span class="s1">&#39;mydata.pdb&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.write_XYZ" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">write_XYZ</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;xu&#39;</span><span class="p">,</span> <span class="s1">&#39;yu&#39;</span><span class="p">,</span> <span class="s1">&#39;zu&#39;</span><span class="p">],</span> <span class="n">FMTstr</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.write_XYZ" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The <code>method</code> to write XYZ file.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>filename</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of input file</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>column</code></b>
+            (<code>list</code>, default:
+                <code>[&#39;X&#39;, &#39;xu&#39;, &#39;yu&#39;, &#39;zu&#39;]</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>list-of-str contains columns to be written. Defaults to ['X','xu','yu','zu']</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>FMTstr</code></b>
+            (<code>str</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>string format for output values. Defaults to None, mean use self._FMT</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>file</code></b> (            <code>obj</code>
+)        –
+        <div class="doc-md-description">
+          <p>the XYZ file</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">write_XYZ</span><span class="p">(</span><span class="s1">&#39;test.xyz&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.combine_frame" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">combine_frame</span><span class="p">(</span><span class="n">TrajFrame</span><span class="p">,</span> <span class="n">merge_type</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">alignment</span><span class="o">=</span><span class="s1">&#39;comXYZ&#39;</span><span class="p">,</span> <span class="n">shift_XYZ</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">separate_XYZ</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">merge_box</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">use_box</span><span class="o">=</span><span class="s1">&#39;box1&#39;</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.combine_frame" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to combine 2 Lammps Frames.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>TrajFrame</code></b>
+            (<code>TrajFrame Obj</code>)
+        –
+        <div class="doc-md-description">
+          <p>an Object of TrajFrame</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>merge_type</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>merge the same type in 2 TrajFrame.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>alignment</code></b>
+            (<code>str</code>, default:
+                <code>&#39;comXYZ&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>choose how to align 2 frame. Defaults to 'comXYZ'.
++ 'comXYZ': align based on COM
++ 'minXYZ': align based on left corner
++ 'maxXYZ': align based on right corner</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>shift_XYZ</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>shift a distance from COM aligment. Defaults to [0,0,0].</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>separate_XYZ</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Separate 2 frame with a specific value. Defaults to [0,0,0].</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>merge_box</code></b>
+            (<code>bool</code>, default:
+                <code>True</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>choose to merge box or not. Defaults to True.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>use_box</code></b>
+            (<code>str</code>, default:
+                <code>&#39;box1&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>be used as the box size if merge_box=False. Defaults to 'box1'.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>Update TrajFrame da1</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da1</span><span class="o">.</span><span class="n">combine_frame</span><span class="p">(</span><span class="n">da2</span><span class="p">)</span>
+</code></pre></div>
+      <div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<ul>
+<li>combine box_angle</li>
+</ul>
+</div>
+<details class="quote" open="open">
+<summary>Quote</summary>
+<p>[1]. Deep copy: <a href="https://stackoverflow.com/questions/3975376/understanding-dict-copy-shallow-or-deep/3975388#3975388">https://stackoverflow.com/questions/3975376/understanding-dict-copy-shallow-or-deep/3975388#3975388</a></p>
+</details>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.unwrap_coord_DATA" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">unwrap_coord_DATA</span><span class="p">(</span><span class="n">imgFlag</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">],</span> <span class="n">atom_types</span><span class="o">=</span><span class="p">[])</span></code>
+
+<a href="#thamd.traj.Frame.unwrap_coord_DATA" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to upwrap coords in DATA file.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>imgFlag</code></b>
+            (<code>list</code>, default:
+                <code>[&#39;x&#39;, &#39;y&#39;, &#39;z&#39;]</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>image Flags in data file. Defaults to ['x','y','z'].</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>atom_types</code></b>
+            (<code>list</code>, default:
+                <code>[]</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>just unwrap some atom-types. Defaults to [], mean unwrap all-types.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+      <details class="note" open="open">
+<summary>Note</summary>
+<p>cannot unwrap_coord_data if imgFlags are not available.</p>
+</details>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.wrap_coords_DUMP" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">wrap_coords_DUMP</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.wrap_coords_DUMP" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to flip coords over the center.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>dim</code></b>
+            (<code>list</code>, default:
+                <code>[1, 1, 1]</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>choose the dimenstion to take flip. Defaults to [1,1,1].</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>inplace</code></b>
+            (<code>bool</code>, default:
+                <code>True</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>if <code>True</code> it will replace (or addd x y z columns). If <code>False</code> it will return xyz array.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.flip_coords" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">flip_coords</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span></code>
+
+<a href="#thamd.traj.Frame.flip_coords" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to flip coords over the center.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>dim</code></b>
+            (<code>list</code>, default:
+                <code>[1, 1, 1]</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>choose the dimenstion to take flip. Defaults to [1,1,1].</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+
+<details class="todos" open>
+  <summary>TODOs</summary>
+  <p>Remove pandas Warning.</p>
+</details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.replicate" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">replicate</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span></code>
+
+<a href="#thamd.traj.Frame.replicate" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to flip coords over the center.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>dim</code></b>
+            (<code>list</code>, default:
+                <code>[1, 1, 1]</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>choose the dimenstion to take flip. Defaults to [1,1,1].</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.scale_box" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">scale_box</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">final</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.scale_box" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to change size of simulation box.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>scale</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>to set scale ratio on each dimension of the box.
+scale = [0.7, 0.7, None] : if one dimension is set "None" its length is not changed.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>final</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>to set final length on each dimension of the box.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>delta</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>to set amount of change on each dimension of the box.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>remap</code></b>
+            (<code>bool</code>, default:
+                <code>True</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>remap atom coordinate. Default to True.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">scale_box</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.add_column" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">add_column</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">newColumn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.add_column" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to add new columns to da.atom.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>data</code></b>
+            (<code>pd.DataFrame pd.Series list</code>)
+        –
+        <div class="doc-md-description">
+          <p>Nxm data of new columns</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>newColumn</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>1xN list contains names of columns. Default to None, mean it will take columnNames from DataFrame</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>replace</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>replace column if existed.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>Update da.atom</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">add_column</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">myColumn</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span><span class="s1">&#39;col2&#39;</span><span class="p">],</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.delete_column" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">delete_column</span><span class="p">(</span><span class="n">delColumns</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.delete_column" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to delete columns from da.atom.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>delColumns</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>1xN list contains names of columns to be deleted.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>Update da.atom</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">delete_column</span><span class="p">(</span><span class="n">delColumns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span><span class="s1">&#39;col2&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.set_mass" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">set_mass</span><span class="p">(</span><span class="n">element_dict</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.set_mass" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to set masses of atoms in system. Before use it, need to define element_dict with 2 keys: 'type', 'atom_symbol'
+    element_dict={'type': list_values, 'atom_symbol':list_values}</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>element_dict</code></b>
+            (<code>dict</code>)
+        –
+        <div class="doc-md-description">
+          <p>a dict to define atom-types and atom-symbols.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>Update da.atom</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">set_mass</span><span class="p">(</span><span class="n">element_dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;atom_symbol&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;H&#39;</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">]})</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.change_atom_type" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">change_atom_type</span><span class="p">(</span><span class="n">old_type</span><span class="p">,</span> <span class="n">new_type</span><span class="p">,</span> <span class="n">save_old_type</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.change_atom_type" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to change types of atoms in system.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>old_type</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>a list of old-types.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>new_type</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>one new-type.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>save_old_type</code></b>
+            (<code>bool</code>, default:
+                <code>True</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>to back up old types. Default to True.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">chage_atom_type</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.merge_atom_type" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">merge_atom_type</span><span class="p">(</span><span class="n">old_type</span><span class="p">,</span> <span class="n">save_old_type</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.merge_atom_type" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to merge types of atoms in system.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>old_type</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>a list of old-types.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>save_old_type</code></b>
+            (<code>bool</code>, default:
+                <code>True</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>to back up old types. Default to True.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">chage_atom_type</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.compute_mass" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">compute_mass</span><span class="p">(</span><span class="n">atom_types</span><span class="o">=</span><span class="p">[])</span></code>
+
+<a href="#thamd.traj.Frame.compute_mass" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to compute mass of selected atom_types.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>atom_types</code></b>
+            (<code>list</code>, default:
+                <code>[]</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>atom-types to compute masses. Defaults to [], mean all-types.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>m</code></b> (            <code>float</code>
+)        –
+        <div class="doc-md-description">
+          <p>total mass of selected atoms.</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">compute_mass</span><span class="p">(</span><span class="n">atom_types</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.compute_wt_percent" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">compute_wt_percent</span><span class="p">(</span><span class="n">atom_types</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.compute_wt_percent" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to compute weight percentage of some atom_types.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>atom_types</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>atom-types compute percentage of weight.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>wt</code></b> (            <code>float</code>
+)        –
+        <div class="doc-md-description">
+          <p>weight percentage of chosen atoms.</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">compute_wt_percent</span><span class="p">(</span><span class="n">atom_types</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.compute_colvar_sph_harm" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">compute_colvar_sph_harm</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;real&#39;</span><span class="p">,</span> <span class="n">normalization</span><span class="o">=</span><span class="s1">&#39;4pi&#39;</span><span class="p">,</span> <span class="n">bound_cond</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">cutoff_neighbor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">k_neighbor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">k_cutoff</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">keep_ref</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">calc_coord</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.compute_colvar_sph_harm" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Compute per-atom vector of spherical harmonics</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>l</code></b>
+            (<code>int)         </code>)
+        –
+        <div class="doc-md-description">
+          <p>degree of Spherical Harmonic</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>form</code></b>
+            (<code> (str</code>)
+        –
+        <div class="doc-md-description">
+          <p>form of return result. Possible <code>complex</code>/<code>real</code>. Default to <code>complex</code></p>
+        </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.copy" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">copy</span><span class="p">()</span></code>
+
+<a href="#thamd.traj.Frame.copy" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to make an indepedent copy of Frame Obj. Then, the change values of the fields of the new object, the old object should not be affected by that.</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code><a class="autorefs autorefs-internal" title="thamd.traj.md_traj.Frame" href="#thamd.traj.Frame">Frame</a></code>
+)        –
+        <div class="doc-md-description">
+          <p>new Frame Obj.</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da1</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</code></pre></div>
+      <details class="quote" open="open">
+<summary>Quote</summary>
+<p>[1]. "shallow copying" vs "deep copying": <a href="https://stackoverflow.com/questions/3975376/understanding-dict-copy-shallow-or-deep/3975388#3975388">https://stackoverflow.com/questions/3975376/understanding-dict-copy-shallow-or-deep/3975388#3975388</a></p>
+</details>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Frame.check_exist" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">check_exist</span><span class="p">(</span><span class="n">atom_types</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mass_types</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Frame.check_exist" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The method to check whether something is existed in system or not.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>atom_types</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>list-of-int of atom-types. Default to None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>mass_types</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>list-of-int of atom-types. Default to None.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>mgs</code></b> (            <code>str</code>
+)        –
+        <div class="doc-md-description">
+          <p>raise Message if error.</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span><span class="o">.</span><span class="n">isExist</span><span class="p">(</span><span class="n">atom_types</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div>
+      <details class="note" open="open">
+<summary>Note</summary>
+<div class="codehilite"><pre><span></span><code><span class="nv">set</span><span class="ss">()</span><span class="w"> </span><span class="nv">also</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nv">unique</span><span class="w"> </span><span class="nv">values</span>.
+</code></pre></div>
+
+</details>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="thamd.traj.Traj" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">Traj</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Traj" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Create an Object for a multi-FRAMEs of trajectories from MD simulation.
+- read frome XYZ file</p>
+  
+      <p>initilize the TrajFrame object</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Use mutator, so do not use self.* when define value</p>
+</details>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.traj.Traj.fmtSTR" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">fmtSTR</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%.6f</span><span class="s1">&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.traj.Traj.fmtSTR" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="thamd.traj.Traj.readXYZ" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">readXYZ</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></code>
+
+<a href="#thamd.traj.Traj.readXYZ" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The <strong>method</strong> create Multi-FRAME object by reading XYZ file.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>filename</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of input file</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b><code>Obj</code></b> (            <code>TrajFrame</code>
+)        –
+        <div class="doc-md-description">
+          <p>update FRAME</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">TrajFrame</span><span class="p">(</span><span class="n">pdb_file</span><span class="o">=</span><span class="s1">&#39;mydata.pdb&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div><!-- ::: thamd.traj.Frame
+::: thamd.traj.Traj -->
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: About">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                About
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../model/crystalline/" class="md-footer__link md-footer__link--next" aria-label="Next: crystalline">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                crystalline
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 <a href="https://thangckt.github.io">thangckt</a>
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<thanckt@gmail.com>" target="_blank" rel="noopener" title="Email to thangckt" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/thangckt" target="_blank" rel="noopener" title="thangckt on Telegram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/thangckt5" target="_blank" rel="noopener" title="thangckt on Facebook" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/thangckt" target="_blank" rel="noopener" title="thangckt on Linkedin" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://orcid.org/0000-0001-9826-5397" target="_blank" rel="noopener" title="thangckt on ORCID" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.indexes", "navigation.tracking", "navigation.top", "search.suggest", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.header", "navigation.footer"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.81a1ca7b.min.js"></script>
+      
+        <script src="../_extend_theme/extra_js/gg_adsense.js"></script>
+      
+    
+  </body>
+</html>
